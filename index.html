@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" href="lib/bootstrap.min.css">
+<link rel="stylesheet" href="src/style.css">
+<script src="lib/jquery-1.12.3.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/tiff.min.js"></script>
+<script src="src/json2yaml.js"></script>
+<script src="src/download.js"></script>
+<script src="src/application.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="form-group">
+					<label class="control-label">Image</label>
+					<div class="canvas-wrapper well">
+						<canvas id="canvas" width=0 height=0></canvas>
+					</div>
+					<input type="file" accept="image/*" id="file" class="form-control">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Download</label>
+					<div>
+						<button type="button" id="json">JSON</button>
+						<button type="button" id="xml">XML</button>
+						<button type="button" id="yml">YML</button>
+						<a href="http://convertjson.com">link</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="form-group">
+							<label class="control-label">object bndbox</label>
+							<div>
+								<select multiple id="objectBndbox" size=12 class="form-control"></select>
+								<button type="button" id="delete">選択削除</button>
+								<button type="button" id="alldelete">全削除</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="form-group">
+							<label class="control-label">object name</label>
+							<div>
+								<input type="text" id="objectName" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">object pose</label>
+							<div>
+								<input type="text" id="objectPose" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">object truncated</label>
+							<div>
+								<input type="text" id="objectTruncated" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">object difficult</label>
+							<div>
+								<input type="text" id="objectDifficult" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="control-label">folder</label>
+							<div>
+								<input type="text" id="folder" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">filename</label>
+							<div>
+								<input type="text" id="filename" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">source database</label>
+							<div>
+								<input type="text" id="sourceDatabase" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">source annotation</label>
+							<div>
+								<input type="text" id="sourceAnnotation" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">source image</label>
+							<div>
+								<input type="text" id="sourceImage" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">source flickrid</label>
+							<div>
+								<input type="text" id="sourceFlickrid" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="control-label">owner flickrid</label>
+							<div>
+								<input type="text" id="ownerFlickrid" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">owner name</label>
+							<div>
+								<input type="text" id="ownerName" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">size width</label>
+							<div>
+								<input type="text" id="sizeWidth" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">size height</label>
+							<div>
+								<input type="text" id="sizeHeight" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">size depth</label>
+							<div>
+								<input type="text" id="sizeDepth" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">segmented</label>
+							<div>
+								<input type="text" id="segmented" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
